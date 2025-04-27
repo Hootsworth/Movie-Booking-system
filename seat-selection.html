@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Movie Booking System</h1>
+        <div style="margin-top: 10px;">
+            <span id="userWelcome">Welcome, User!</span>
+            <button class="btn" id="logoutBtn" style="margin-left: 20px;">Logout</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2 id="movieTitle">Movie Title</h2>
+            <div id="showtimeInfo">
+                <!-- Showtime info will be displayed here -->
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="screen">SCREEN</div>
+            <div class="seats-container" id="seatsContainer">
+                <!-- Seats will be loaded dynamically -->
+            </div>
+            
+            <div class="text-center">
+                <p>Selected Seats: <span id="selectedSeatsText">None</span></p>
+                <p>Total Price: <span id="totalPrice">₹0</span></p>
+                <button class="btn" id="proceedBtn" disabled>Proceed to Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/seat-selection.js"></script>
+</body>
+</html>

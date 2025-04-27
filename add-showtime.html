@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Showtime</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Movie Booking System - Admin Panel</h1>
+        <div style="margin-top: 10px;">
+            <span id="adminWelcome">Welcome, Admin!</span>
+            <button class="btn" id="logoutBtn" style="margin-left: 20px;">Logout</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Add New Showtime</h2>
+            <form id="showtimeForm">
+                <div class="form-group">
+                    <label for="movieSelect">Movie</label>
+                    <select id="movieSelect" class="form-control" required>
+                        <option value="">Select Movie</option>
+                        <!-- Movies will be loaded dynamically -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="theatreSelect">Theatre</label>
+                    <select id="theatreSelect" class="form-control" required>
+                        <option value="">Select Theatre</option>
+                        <!-- Theatres will be loaded dynamically -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="screenSelect">Screen</label>
+                    <select id="screenSelect" class="form-control" required>
+                        <option value="">Select Screen</option>
+                        <!-- Screens will be loaded dynamically based on theatre -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="showDate">Show Date</label>
+                    <input type="date" id="showDate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="showTime">Show Time</label>
+                    <input type="time" id="showTime" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="availableSeats">Available Seats</label>
+                    <input type="number" id="availableSeats" class="form-control" required>
+                </div>
+                
+                <div class="text-center">
+                    <a href="admin-dashboard.html" class="btn btn-secondary">Back to Dashboard</a>
+                    <button type="submit" class="btn">Save Showtime</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

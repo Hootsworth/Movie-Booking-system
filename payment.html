@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Movie Booking System</h1>
+        <div style="margin-top: 10px;">
+            <span id="userWelcome">Welcome, User!</span>
+            <button class="btn" id="logoutBtn" style="margin-left: 20px;">Logout</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Booking Summary</h2>
+            <div id="bookingSummary">
+                <!-- Booking summary will be displayed here -->
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Payment Details</h2>
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" class="form-control" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Debit Card">Debit Card</option>
+                        <option value="UPI">UPI</option>
+                    </select>
+                </div>
+
+                <div id="cardDetails" style="display: none;">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" id="cardName" class="form-control">
+                    </div>
+                    <div style="display: flex; gap: 15px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" id="expiryDate" class="form-control" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" class="form-control" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="upiDetails" style="display: none;">
+                    <div class="form-group">
+                        <label for="upiId">UPI ID</label>
+                        <input type="text" id="upiId" class="form-control" placeholder="example@upi">
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 20px;">
+                    <p>Total Amount: <span id="totalAmount">₹0</span></p>
+                    <button type="submit" class="btn">Confirm Payment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/payment.js"></script>
+</body>
+</html>
